@@ -1,22 +1,31 @@
 /// <reference types="cypress" />
 
 export const homePage = {
-    openMenu(menu){
+    openMenu(menu) {
         return cy.get(`[href="/Tab/${menu}"]`).click()
     },
-    openSearchProduct(){
+    openSearchProduct() {
         cy.get('[data-testid="search-products"]').click()
     },
-    searchProduct(product){
+    searchProduct(product) {
         cy.get('[data-testid="searchInput"]').type(product)
     },
-    products(){
+    products() {
         return cy.get('[data-testid="browse-product-list"] [data-testid="productDetails"]')
     },
-    openCategoriesFilter(){
+    openCategoriesFilter() {
         cy.get('[data-testid="Category"]').click()
     },
-    categories(){
+    categories() {
         return cy.get('[data-testid^="search-category-"]')
+    },
+    getProduct(numero) {
+        cy.get('[data-testid="browse-product-list"] [data-testid="productDetails"]')
+            .eq(numero)
+            .click();
+    },
+    buyProduct() {
+        cy.get('[data-testid="addToCart"]').click()
     }
+
 }
