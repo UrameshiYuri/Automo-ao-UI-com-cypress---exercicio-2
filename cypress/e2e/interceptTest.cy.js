@@ -1,12 +1,15 @@
 /// <reference types="cypress" />
 
-const { email, senha } = require("../fixtures/data.json");
+import users from '../fixtures/data.json';
 const { homePage } = require("../support/pages/home.page");
 
 describe('deve usar o intercept para simular e validar respostas dadas pela API', () => {
 
     beforeEach(() => {
-        cy.login(email, senha)
+        const userLOCAL = users[2];
+        cy.log(userLOCAL.email);
+        cy.log(userLOCAL.senha);
+        cy.login(userLOCAL.email, userLOCAL.senha)
     })
 
     it('deve interceptar uma compra com Intercept', () => {

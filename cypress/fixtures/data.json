@@ -1,4 +1,18 @@
-{
-  "email": "cliente@ebac.art.br",
-  "senha": "GD*peToHNJ1#c$sgk08EaYJQ"
-}
+[
+  {
+    "email": "clientePRD@ebac.art.br",
+    "senha": "GD*peToHN1Ic$sgk08e8AvJQ"
+  },
+  {
+    "email": "clienteDEV@ebac.art.br",
+    "senha": "GD*peToHN1Ic$sgk08e8AvJQ"
+  },
+  {
+    "email": "clienteLocal@ebac.art.br",
+    "senha": "GD*peToHN1Ic$sgk08e8AvJQ"
+  },
+  {
+    "email": "clienteHML@ebac.art.br",
+    "senha": "GD*peToHN1Ic$sgk08e8AvJQ"
+  }
+]
