@@ -18,12 +18,12 @@
     "cypress-html-reporter": "^11.0.0",
     "cypress-lens": "^1.12.0",
     "dotenv": "^16.4.1",
-    "mochawesome": "^1.5.5",
+    "mochawesome": "^7.1.4",
     "mochawesome-merge": "^4.3.0",
     "puppeteer": "^24.35.0",
     "start-server-and-test": "^3.0.11"
   },
   "devDependencies": {
-    "serverest": "^3.2.0"
+    "serverest": "^2.25.4"
   }
 }
