@@ -25,8 +25,11 @@ describe('deve usar o intercept para simular e validar respostas dadas pela API'
             }
         ).as('putUpdateCart');
         homePage.openSearchProduct()
+        cy.wait(2000)
         homePage.searchProduct('camiseta EBAC ')
+        cy.wait(2000)
         homePage.getProduct(1)
+        cy.wait(2000)
         homePage.buyProduct()
     });
 

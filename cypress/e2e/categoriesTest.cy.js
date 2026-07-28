@@ -16,7 +16,9 @@ describe('Categories', () => {
     categories.forEach(category => {
         it(`Validacao categoria ${category.name}`, () => {
             homePage.openSearchProduct()
+            cy.wait(2000)
             homePage.openCategoriesFilter()
+            cy.wait(2000)
             homePage.categories().should('contain.text', category.name)
 
             cy.compareSnapshot(Cypress.currentTest.title, 1)
