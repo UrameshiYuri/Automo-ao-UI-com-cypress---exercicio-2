@@ -7,31 +7,15 @@ const getCompareSnapshotsPlugin = require("cypress-lens/dist/plugin");
 module.exports = defineConfig({
   screenshotsFolder: "./cypress/snapshots/actual/cypress/e2e",
   trashAssetsBeforeRuns: true,
-  video: false,  
+  video: false,
   e2e: {
     baseUrl: 'http://lojaebac.ebaconline.art.br/',
+    supportFile: 'cypress/support/e2e.js',
     setupNodeEvents(on, config) {
-
-      // require('cypress-html-reporter/GenerateReport')(on, config)
       getCompareSnapshotsPlugin(on, config)
-
-      // on('before:browser:launch', (browser = {}, launchOptions) => {
-      //   if (browser.name === 'chrome') {
-      //     const debuggingPort = launchOptions.args.find(
-      //       (arg) => arg.slice(0, 23) === '--remote-debugging-port',
-      //     );
-      //     setDebuggingPort(debuggingPort.split('='));
-      //   }
-      //   return launchOptions;
-      // });
-
-      // on('task', {
-      //   tabNavigation
-      // });
-
     },
     env: {
-      // MY_ENV: "dev",
+
       MY_ENV: process.env.MY_ENV,
       ebacStoreVersion: "v1",
       failSilently: false,
@@ -41,9 +25,11 @@ module.exports = defineConfig({
     reporter: 'cypress-lens'
 
   },
-  // reporter: 'mochawesome',
-  // reporterOptions: {
-  //   reportFilename: "[name]-result",
-  //   html: false
-  // }
+  reporterOptions: {
+    reportDir: 'mochawesome-report',
+    overwrite: false,
+    reportFilename: "index.html",
+    html: true,
+    json: false
+  }
 });
