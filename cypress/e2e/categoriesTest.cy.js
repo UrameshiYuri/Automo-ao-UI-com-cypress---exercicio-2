@@ -1,13 +1,16 @@
 /// <reference types="cypress" />
 
 const { categories } = require("../fixtures/categories.json");
-const { email, senha } = require("../fixtures/data.json");
+import users from '../fixtures/data.json';
 const { homePage } = require("../support/pages/home.page");
 
 describe('Categories', () => {
 
     beforeEach(() => {
-        cy.login(email, senha)
+        const userLOCAL = users[2];
+        cy.log(userLOCAL.email);
+        cy.log(userLOCAL.senha);
+        cy.login(userLOCAL.email, userLOCAL.senha)
     })
 
     categories.forEach(category => {
