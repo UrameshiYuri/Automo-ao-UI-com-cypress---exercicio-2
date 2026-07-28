@@ -8,7 +8,7 @@
     "report": "npm run mergeJsonReport && npm run generateReport",
     "mergeJsonReport": "npx mochawesome-merge ./mochawesome-report/*.json -o ./mochawesome-report/result.json",
     "generateReport": "npx marge ./mochawesome-report/result.json -o ./mochawesome-report",
-    "start": "npx severest",
+    "start": "npx serverest",
     "cy:run-ci": "start-server-and-test start http://lojaebac.ebaconline.art.br/ test"
   },
   "author": "ernestosbarbosa",
