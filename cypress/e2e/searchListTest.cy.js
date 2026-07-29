@@ -6,6 +6,7 @@ const { homePage } = require("../support/pages/home.page");
 describe('List Products', () => {
 
     beforeEach(() => {
+        cy.wait(2000)
         const userLOCAL = users[2];
         cy.log(userLOCAL.email);
         cy.log(userLOCAL.senha);
