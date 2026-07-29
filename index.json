@@ -2,14 +2,14 @@
   "stats": {
     "suites": 1,
     "tests": 1,
-    "passes": 1,
+    "passes": 0,
     "pending": 0,
-    "failures": 0,
-    "start": "2026-07-29T18:43:28.792Z",
-    "end": "2026-07-29T18:43:50.199Z",
-    "duration": 21407,
+    "failures": 1,
+    "start": "2026-07-29T18:49:40.979Z",
+    "end": "2026-07-29T18:50:43.777Z",
+    "duration": 62798,
     "testsRegistered": 1,
-    "passPercent": 100,
+    "passPercent": 0,
     "pendingPercent": 0,
     "other": 0,
     "hasOther": false,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "f94eb9b2-b6f6-4a45-a127-943198232e80",
+      "uuid": "509731b8-9686-4ae8-9dab-0957a70229d0",
       "title": "",
       "fullFile": "cypress/e2e/interceptTest.cy.js",
       "file": "cypress/e2e/interceptTest.cy.js",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "038d931c-ea17-4be6-b962-9f66a231386f",
+          "uuid": "24afe51a-0656-46f7-86e0-1c58e0a7fc1a",
           "title": "deve usar o intercept para simular e validar respostas dadas pela API",
           "fullFile": "",
           "file": "",
@@ -38,29 +38,33 @@
               "title": "deve interceptar uma compra com Intercept",
               "fullTitle": "deve usar o intercept para simular e validar respostas dadas pela API deve interceptar uma compra com Intercept",
               "timedOut": null,
-              "duration": 21308,
-              "state": "passed",
-              "speed": "slow",
-              "pass": true,
-              "fail": false,
+              "duration": 62512,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
               "pending": false,
               "context": null,
               "code": "cy.intercept('PUT', '/public/updateCart/67f55de836e994dfd8baa11a', {\n  statusCode: 200,\n  body: {\n    message: 'Produto adicionado com sucesso!'\n  }\n}).as('putUpdateCart');\nhomePage.openSearchProduct();\ncy.wait(2000);\nhomePage.searchProduct('camiseta EBAC ');\ncy.wait(2000);\nhomePage.getProduct(1);\ncy.wait(2000);\nhomePage.buyProduct();",
-              "err": {},
-              "uuid": "ecb1cbda-61ee-45d7-9023-69c6f2d28ea5",
-              "parentUUID": "038d931c-ea17-4be6-b962-9f66a231386f",
+              "err": {
+                "message": "CypressError: Timed out after waiting `60000ms` for your remote page to load.\n\nYour page did not fire its `load` event within `60000ms`.\n\nYou can try increasing the `pageLoadTimeout` value in `home/runner/work/Automo-ao-UI-com-cypress---exercicio-2/Automo-ao-UI-com-cypress---exercicio-2/cypress.config.js` to wait longer.\n\nBrowsers will not fire the `load` event until all stylesheets and scripts are done downloading.\n\nWhen this `load` event occurs, Cypress will continue running commands.\n\nBecause this error occurred during a `before each` hook we are skipping the remaining tests in the current suite: `deve usar o intercept para ...`",
+                "estack": "CypressError: Timed out after waiting `60000ms` for your remote page to load.\n\nYour page did not fire its `load` event within `60000ms`.\n\nYou can try increasing the `pageLoadTimeout` value in `home/runner/work/Automo-ao-UI-com-cypress---exercicio-2/Automo-ao-UI-com-cypress---exercicio-2/cypress.config.js` to wait longer.\n\nBrowsers will not fire the `load` event until all stylesheets and scripts are done downloading.\n\nWhen this `load` event occurs, Cypress will continue running commands.\n\nBecause this error occurred during a `before each` hook we are skipping the remaining tests in the current suite: `deve usar o intercept para ...`\n    at timedOutWaitingForPageLoad (http://lojaebac.ebaconline.art.br/__cypress/runner/cypress_runner.js:130005:64)\n    at <unknown> (http://lojaebac.ebaconline.art.br/__cypress/runner/cypress_runner.js:130991:16)\n    at tryCatcher (http://lojaebac.ebaconline.art.br/__cypress/runner/cypress_runner.js:1807:23)\n    at <unknown> (http://lojaebac.ebaconline.art.br/__cypress/runner/cypress_runner.js:4186:41)\n    at tryCatcher (http://lojaebac.ebaconline.art.br/__cypress/runner/cypress_runner.js:1807:23)\n    at Promise._settlePromiseFromHandler (http://lojaebac.ebaconline.art.br/__cypress/runner/cypress_runner.js:1519:31)\n    at Promise._settlePromise (http://lojaebac.ebaconline.art.br/__cypress/runner/cypress_runner.js:1576:18)\n    at Promise._settlePromise0 (http://lojaebac.ebaconline.art.br/__cypress/runner/cypress_runner.js:1621:10)\n    at Promise._settlePromises (http://lojaebac.ebaconline.art.br/__cypress/runner/cypress_runner.js:1697:18)\n    at _drainQueueStep (http://lojaebac.ebaconline.art.br/__cypress/runner/cypress_runner.js:2407:12)\n    at _drainQueue (http://lojaebac.ebaconline.art.br/__cypress/runner/cypress_runner.js:2400:9)\n    at Async._drainQueues (http://lojaebac.ebaconline.art.br/__cypress/runner/cypress_runner.js:2416:5)\n    at Async.drainQueues (http://lojaebac.ebaconline.art.br/__cypress/runner/cypress_runner.js:2286:14)\nFrom Your Spec Code:\n    at Context.eval (webpack://cy-lens/./cypress/support/actions/login.js:8:7)",
+                "diff": null
+              },
+              "uuid": "16cf9edf-e762-4d77-a5f1-fd00a45aaf9e",
+              "parentUUID": "24afe51a-0656-46f7-86e0-1c58e0a7fc1a",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
-          "passes": [
-            "ecb1cbda-61ee-45d7-9023-69c6f2d28ea5"
+          "passes": [],
+          "failures": [
+            "16cf9edf-e762-4d77-a5f1-fd00a45aaf9e"
           ],
-          "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 21308,
+          "duration": 62512,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
