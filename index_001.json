@@ -5,9 +5,9 @@
     "passes": 0,
     "pending": 0,
     "failures": 1,
-    "start": "2026-07-29T18:38:57.899Z",
-    "end": "2026-07-29T18:39:17.587Z",
-    "duration": 19688,
+    "start": "2026-07-29T18:43:51.865Z",
+    "end": "2026-07-29T18:44:56.553Z",
+    "duration": 64688,
     "testsRegistered": 1,
     "passPercent": 0,
     "pendingPercent": 0,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "b9a65b99-5af5-4239-8b85-9065d76b5084",
+      "uuid": "9f7b3c94-b20f-42f1-9387-350788dd020c",
       "title": "",
       "fullFile": "cypress/e2e/searchListTest.cy.js",
       "file": "cypress/e2e/searchListTest.cy.js",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "628297be-e1d8-4743-a8f7-259fe3464fec",
+          "uuid": "87263a44-2122-41d7-85da-089116f6d3ed",
           "title": "List Products",
           "fullFile": "",
           "file": "",
@@ -38,7 +38,7 @@
               "title": "should search product",
               "fullTitle": "List Products should search product",
               "timedOut": null,
-              "duration": 19534,
+              "duration": 64462,
               "state": "failed",
               "speed": null,
               "pass": false,
@@ -47,12 +47,12 @@
               "context": null,
               "code": "cy.wait(2000);\nhomePage.openSearchProduct();\ncy.wait(2000);\nhomePage.searchProduct('in');\ncy.wait(2000);\nhomePage.products().should('have.length.greaterThan', 0);\nhomePage.products().each(product => {\n  let price = product.find('[data-testid=\"price\"]').text();\n  expect(price).to.contain('R$');\n});\ncy.compareSnapshot(Cypress.currentTest.title, 0);",
               "err": {
-                "message": "Error: The \"type\" environment variable is unknown. \nExpected: \"actual\" or \"base\" \nActual: undefined",
-                "estack": "Error: The \"type\" environment variable is unknown. \nExpected: \"actual\" or \"base\" \nActual: undefined\n    at Context.eval (webpack://cy-lens/./node_modules/cypress-lens/dist/command.js:118:0)",
+                "message": "CypressError: Timed out after waiting `60000ms` for your remote page to load.\n\nYour page did not fire its `load` event within `60000ms`.\n\nYou can try increasing the `pageLoadTimeout` value in `home/runner/work/Automo-ao-UI-com-cypress---exercicio-2/Automo-ao-UI-com-cypress---exercicio-2/cypress.config.js` to wait longer.\n\nBrowsers will not fire the `load` event until all stylesheets and scripts are done downloading.\n\nWhen this `load` event occurs, Cypress will continue running commands.\n\nBecause this error occurred during a `before each` hook we are skipping the remaining tests in the current suite: `List Products`",
+                "estack": "CypressError: Timed out after waiting `60000ms` for your remote page to load.\n\nYour page did not fire its `load` event within `60000ms`.\n\nYou can try increasing the `pageLoadTimeout` value in `home/runner/work/Automo-ao-UI-com-cypress---exercicio-2/Automo-ao-UI-com-cypress---exercicio-2/cypress.config.js` to wait longer.\n\nBrowsers will not fire the `load` event until all stylesheets and scripts are done downloading.\n\nWhen this `load` event occurs, Cypress will continue running commands.\n\nBecause this error occurred during a `before each` hook we are skipping the remaining tests in the current suite: `List Products`\n    at timedOutWaitingForPageLoad (http://lojaebac.ebaconline.art.br/__cypress/runner/cypress_runner.js:130005:64)\n    at <unknown> (http://lojaebac.ebaconline.art.br/__cypress/runner/cypress_runner.js:130991:16)\n    at tryCatcher (http://lojaebac.ebaconline.art.br/__cypress/runner/cypress_runner.js:1807:23)\n    at <unknown> (http://lojaebac.ebaconline.art.br/__cypress/runner/cypress_runner.js:4186:41)\n    at tryCatcher (http://lojaebac.ebaconline.art.br/__cypress/runner/cypress_runner.js:1807:23)\n    at Promise._settlePromiseFromHandler (http://lojaebac.ebaconline.art.br/__cypress/runner/cypress_runner.js:1519:31)\n    at Promise._settlePromise (http://lojaebac.ebaconline.art.br/__cypress/runner/cypress_runner.js:1576:18)\n    at Promise._settlePromise0 (http://lojaebac.ebaconline.art.br/__cypress/runner/cypress_runner.js:1621:10)\n    at Promise._settlePromises (http://lojaebac.ebaconline.art.br/__cypress/runner/cypress_runner.js:1697:18)\n    at _drainQueueStep (http://lojaebac.ebaconline.art.br/__cypress/runner/cypress_runner.js:2407:12)\n    at _drainQueue (http://lojaebac.ebaconline.art.br/__cypress/runner/cypress_runner.js:2400:9)\n    at Async._drainQueues (http://lojaebac.ebaconline.art.br/__cypress/runner/cypress_runner.js:2416:5)\n    at Async.drainQueues (http://lojaebac.ebaconline.art.br/__cypress/runner/cypress_runner.js:2286:14)\nFrom Your Spec Code:\n    at Context.eval (webpack://cy-lens/./cypress/support/actions/login.js:8:7)",
                 "diff": null
               },
-              "uuid": "dfc09bc5-9347-4310-b01c-bfb5bc4d1f24",
-              "parentUUID": "628297be-e1d8-4743-a8f7-259fe3464fec",
+              "uuid": "4fb6e3fb-b37e-4392-8fdc-9b9839ccc0d0",
+              "parentUUID": "87263a44-2122-41d7-85da-089116f6d3ed",
               "isHook": false,
               "skipped": false
             }
@@ -60,11 +60,11 @@
           "suites": [],
           "passes": [],
           "failures": [
-            "dfc09bc5-9347-4310-b01c-bfb5bc4d1f24"
+            "4fb6e3fb-b37e-4392-8fdc-9b9839ccc0d0"
           ],
           "pending": [],
           "skipped": [],
-          "duration": 19534,
+          "duration": 64462,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
