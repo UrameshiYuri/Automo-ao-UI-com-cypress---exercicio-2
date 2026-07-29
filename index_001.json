@@ -5,9 +5,9 @@
     "passes": 0,
     "pending": 0,
     "failures": 1,
-    "start": "2026-07-28T19:27:37.325Z",
-    "end": "2026-07-28T19:28:40.014Z",
-    "duration": 62689,
+    "start": "2026-07-29T18:31:50.905Z",
+    "end": "2026-07-29T18:32:53.675Z",
+    "duration": 62770,
     "testsRegistered": 1,
     "passPercent": 0,
     "pendingPercent": 0,
@@ -18,41 +18,41 @@
   },
   "results": [
     {
-      "uuid": "3819a1fd-c30a-4f5d-8bbf-8035d0af5bf5",
+      "uuid": "fc3799d3-6fe2-459b-81e6-f0be356b7763",
       "title": "",
-      "fullFile": "cypress/e2e/interceptTest.cy.js",
-      "file": "cypress/e2e/interceptTest.cy.js",
+      "fullFile": "cypress/e2e/searchListTest.cy.js",
+      "file": "cypress/e2e/searchListTest.cy.js",
       "beforeHooks": [],
       "afterHooks": [],
       "tests": [],
       "suites": [
         {
-          "uuid": "caba92bc-92b3-467c-9036-930dfe15ed74",
-          "title": "deve usar o intercept para simular e validar respostas dadas pela API",
+          "uuid": "ecdf3105-8836-43b3-83f4-3ceaaa2e9bc1",
+          "title": "List Products",
           "fullFile": "",
           "file": "",
           "beforeHooks": [],
           "afterHooks": [],
           "tests": [
             {
-              "title": "deve interceptar uma compra com Intercept",
-              "fullTitle": "deve usar o intercept para simular e validar respostas dadas pela API deve interceptar uma compra com Intercept",
+              "title": "should search product",
+              "fullTitle": "List Products should search product",
               "timedOut": null,
-              "duration": 62447,
+              "duration": 62500,
               "state": "failed",
               "speed": null,
               "pass": false,
               "fail": true,
               "pending": false,
               "context": null,
-              "code": "cy.intercept('PUT', '/public/updateCart/67f55de836e994dfd8baa11a', {\n  statusCode: 200,\n  body: {\n    message: 'Produto adicionado com sucesso!'\n  }\n}).as('putUpdateCart');\nhomePage.openSearchProduct();\ncy.wait(2000);\nhomePage.searchProduct('camiseta EBAC ');\ncy.wait(2000);\nhomePage.getProduct(1);\ncy.wait(2000);\nhomePage.buyProduct();",
+              "code": "cy.wait(2000);\nhomePage.openSearchProduct();\ncy.wait(2000);\nhomePage.searchProduct('in');\ncy.wait(2000);\nhomePage.products().should('have.length.greaterThan', 0);\nhomePage.products().each(product => {\n  let price = product.find('[data-testid=\"price\"]').text();\n  expect(price).to.contain('R$');\n});\ncy.compareSnapshot(Cypress.currentTest.title, 0);",
               "err": {
-                "message": "CypressError: Timed out after waiting `60000ms` for your remote page to load.\n\nYour page did not fire its `load` event within `60000ms`.\n\nYou can try increasing the `pageLoadTimeout` value in `home/runner/work/Automo-ao-UI-com-cypress---exercicio-2/Automo-ao-UI-com-cypress---exercicio-2/cypress.config.js` to wait longer.\n\nBrowsers will not fire the `load` event until all stylesheets and scripts are done downloading.\n\nWhen this `load` event occurs, Cypress will continue running commands.\n\nBecause this error occurred during a `before each` hook we are skipping the remaining tests in the current suite: `deve usar o intercept para ...`",
-                "estack": "CypressError: Timed out after waiting `60000ms` for your remote page to load.\n\nYour page did not fire its `load` event within `60000ms`.\n\nYou can try increasing the `pageLoadTimeout` value in `home/runner/work/Automo-ao-UI-com-cypress---exercicio-2/Automo-ao-UI-com-cypress---exercicio-2/cypress.config.js` to wait longer.\n\nBrowsers will not fire the `load` event until all stylesheets and scripts are done downloading.\n\nWhen this `load` event occurs, Cypress will continue running commands.\n\nBecause this error occurred during a `before each` hook we are skipping the remaining tests in the current suite: `deve usar o intercept para ...`\n    at timedOutWaitingForPageLoad (http://lojaebac.ebaconline.art.br/__cypress/runner/cypress_runner.js:130005:64)\n    at <unknown> (http://lojaebac.ebaconline.art.br/__cypress/runner/cypress_runner.js:130991:16)\n    at tryCatcher (http://lojaebac.ebaconline.art.br/__cypress/runner/cypress_runner.js:1807:23)\n    at <unknown> (http://lojaebac.ebaconline.art.br/__cypress/runner/cypress_runner.js:4186:41)\n    at tryCatcher (http://lojaebac.ebaconline.art.br/__cypress/runner/cypress_runner.js:1807:23)\n    at Promise._settlePromiseFromHandler (http://lojaebac.ebaconline.art.br/__cypress/runner/cypress_runner.js:1519:31)\n    at Promise._settlePromise (http://lojaebac.ebaconline.art.br/__cypress/runner/cypress_runner.js:1576:18)\n    at Promise._settlePromise0 (http://lojaebac.ebaconline.art.br/__cypress/runner/cypress_runner.js:1621:10)\n    at Promise._settlePromises (http://lojaebac.ebaconline.art.br/__cypress/runner/cypress_runner.js:1697:18)\n    at _drainQueueStep (http://lojaebac.ebaconline.art.br/__cypress/runner/cypress_runner.js:2407:12)\n    at _drainQueue (http://lojaebac.ebaconline.art.br/__cypress/runner/cypress_runner.js:2400:9)\n    at Async._drainQueues (http://lojaebac.ebaconline.art.br/__cypress/runner/cypress_runner.js:2416:5)\n    at Async.drainQueues (http://lojaebac.ebaconline.art.br/__cypress/runner/cypress_runner.js:2286:14)\nFrom Your Spec Code:\n    at Context.eval (webpack://cy-lens/./cypress/support/actions/login.js:8:7)",
+                "message": "CypressError: Timed out after waiting `60000ms` for your remote page to load.\n\nYour page did not fire its `load` event within `60000ms`.\n\nYou can try increasing the `pageLoadTimeout` value in `home/runner/work/Automo-ao-UI-com-cypress---exercicio-2/Automo-ao-UI-com-cypress---exercicio-2/cypress.config.js` to wait longer.\n\nBrowsers will not fire the `load` event until all stylesheets and scripts are done downloading.\n\nWhen this `load` event occurs, Cypress will continue running commands.\n\nBecause this error occurred during a `before each` hook we are skipping the remaining tests in the current suite: `List Products`",
+                "estack": "CypressError: Timed out after waiting `60000ms` for your remote page to load.\n\nYour page did not fire its `load` event within `60000ms`.\n\nYou can try increasing the `pageLoadTimeout` value in `home/runner/work/Automo-ao-UI-com-cypress---exercicio-2/Automo-ao-UI-com-cypress---exercicio-2/cypress.config.js` to wait longer.\n\nBrowsers will not fire the `load` event until all stylesheets and scripts are done downloading.\n\nWhen this `load` event occurs, Cypress will continue running commands.\n\nBecause this error occurred during a `before each` hook we are skipping the remaining tests in the current suite: `List Products`\n    at timedOutWaitingForPageLoad (http://lojaebac.ebaconline.art.br/__cypress/runner/cypress_runner.js:130005:64)\n    at <unknown> (http://lojaebac.ebaconline.art.br/__cypress/runner/cypress_runner.js:130991:16)\n    at tryCatcher (http://lojaebac.ebaconline.art.br/__cypress/runner/cypress_runner.js:1807:23)\n    at <unknown> (http://lojaebac.ebaconline.art.br/__cypress/runner/cypress_runner.js:4186:41)\n    at tryCatcher (http://lojaebac.ebaconline.art.br/__cypress/runner/cypress_runner.js:1807:23)\n    at Promise._settlePromiseFromHandler (http://lojaebac.ebaconline.art.br/__cypress/runner/cypress_runner.js:1519:31)\n    at Promise._settlePromise (http://lojaebac.ebaconline.art.br/__cypress/runner/cypress_runner.js:1576:18)\n    at Promise._settlePromise0 (http://lojaebac.ebaconline.art.br/__cypress/runner/cypress_runner.js:1621:10)\n    at Promise._settlePromises (http://lojaebac.ebaconline.art.br/__cypress/runner/cypress_runner.js:1697:18)\n    at _drainQueueStep (http://lojaebac.ebaconline.art.br/__cypress/runner/cypress_runner.js:2407:12)\n    at _drainQueue (http://lojaebac.ebaconline.art.br/__cypress/runner/cypress_runner.js:2400:9)\n    at Async._drainQueues (http://lojaebac.ebaconline.art.br/__cypress/runner/cypress_runner.js:2416:5)\n    at Async.drainQueues (http://lojaebac.ebaconline.art.br/__cypress/runner/cypress_runner.js:2286:14)\nFrom Your Spec Code:\n    at Context.eval (webpack://cy-lens/./cypress/support/actions/login.js:8:7)",
                 "diff": null
               },
-              "uuid": "d743acdc-3f92-4df0-9de7-269b253c99af",
-              "parentUUID": "caba92bc-92b3-467c-9036-930dfe15ed74",
+              "uuid": "cf8c8bfd-0d8f-4d34-81c0-cbbf849df261",
+              "parentUUID": "ecdf3105-8836-43b3-83f4-3ceaaa2e9bc1",
               "isHook": false,
               "skipped": false
             }
@@ -60,11 +60,11 @@
           "suites": [],
           "passes": [],
           "failures": [
-            "d743acdc-3f92-4df0-9de7-269b253c99af"
+            "cf8c8bfd-0d8f-4d34-81c0-cbbf849df261"
           ],
           "pending": [],
           "skipped": [],
-          "duration": 62447,
+          "duration": 62500,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
