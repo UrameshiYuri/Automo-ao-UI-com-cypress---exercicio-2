@@ -5,9 +5,9 @@
     "passes": 1,
     "pending": 0,
     "failures": 0,
-    "start": "2026-07-29T18:31:28.692Z",
-    "end": "2026-07-29T18:31:49.063Z",
-    "duration": 20371,
+    "start": "2026-07-29T18:38:35.888Z",
+    "end": "2026-07-29T18:38:55.736Z",
+    "duration": 19848,
     "testsRegistered": 1,
     "passPercent": 100,
     "pendingPercent": 0,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "e28a82e6-598f-4d8d-a3e4-95aab83cf07a",
+      "uuid": "70d4f3a6-7ce3-4b88-b58e-6d4db09dfdbc",
       "title": "",
       "fullFile": "cypress/e2e/interceptTest.cy.js",
       "file": "cypress/e2e/interceptTest.cy.js",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "73ef39c6-fa89-4145-8bc9-0083e5764e50",
+          "uuid": "928001b5-62a1-4c8c-b6f7-5f3d1f223e22",
           "title": "deve usar o intercept para simular e validar respostas dadas pela API",
           "fullFile": "",
           "file": "",
@@ -38,7 +38,7 @@
               "title": "deve interceptar uma compra com Intercept",
               "fullTitle": "deve usar o intercept para simular e validar respostas dadas pela API deve interceptar uma compra com Intercept",
               "timedOut": null,
-              "duration": 20165,
+              "duration": 19751,
               "state": "passed",
               "speed": "slow",
               "pass": true,
@@ -47,20 +47,20 @@
               "context": null,
               "code": "cy.intercept('PUT', '/public/updateCart/67f55de836e994dfd8baa11a', {\n  statusCode: 200,\n  body: {\n    message: 'Produto adicionado com sucesso!'\n  }\n}).as('putUpdateCart');\nhomePage.openSearchProduct();\ncy.wait(2000);\nhomePage.searchProduct('camiseta EBAC ');\ncy.wait(2000);\nhomePage.getProduct(1);\ncy.wait(2000);\nhomePage.buyProduct();",
               "err": {},
-              "uuid": "e31a199a-a554-4b92-bff5-eacd9735243f",
-              "parentUUID": "73ef39c6-fa89-4145-8bc9-0083e5764e50",
+              "uuid": "0c7cb275-ce56-4803-9652-5b381feab46b",
+              "parentUUID": "928001b5-62a1-4c8c-b6f7-5f3d1f223e22",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "e31a199a-a554-4b92-bff5-eacd9735243f"
+            "0c7cb275-ce56-4803-9652-5b381feab46b"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 20165,
+          "duration": 19751,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
