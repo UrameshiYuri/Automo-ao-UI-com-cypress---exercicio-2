@@ -26,8 +26,6 @@ jobs:
 
       - name: Instalar dependências
         run: npm ci
-        run: npm cy:base
-        run: npm cy:actual
 
       - name: Executar testes
         run: npm run cy:run-ci
